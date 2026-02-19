@@ -1,5 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
+  dependencies = { "p00f/clangd_extensions.nvim" },
   opts = {
     servers = {
       -- Ensure mason installs the server

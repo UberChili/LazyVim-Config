@@ -2,6 +2,7 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
+      "rouge8/neotest-rust",
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
@@ -12,6 +13,7 @@ return {
           vim.cmd(":TSUpdate go")
         end,
       },
+      -- Configuring the Go adapter
       {
         "fredrikaverpil/neotest-golang",
         version = "*", -- Optional, but recommended; track releases
@@ -27,6 +29,7 @@ return {
       require("neotest").setup({
         adapters = {
           require("neotest-golang")(config),
+          require("neotest-rust"),
         },
       })
     end,

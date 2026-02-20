@@ -3,9 +3,11 @@ return {
     "nvim-neotest/neotest",
     dependencies = {
       "rouge8/neotest-rust",
+      "fredrikaverpil/neotest-golang",
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
       {
         "nvim-treesitter/nvim-treesitter", -- Optional, but recommended
         branch = "main", -- NOTE; not the master branch!

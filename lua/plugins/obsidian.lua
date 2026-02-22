@@ -15,7 +15,17 @@ return {
         -- Fedora 43 Desktop
         -- path = "/home/andros/Nextcloud/Vault",
         -- Fedora 42 Fedora Asahi Remix
-        path = "/home/andres/Nextcloud/Vault/",
+        -- path = "/home/andres/Nextcloud/Vault/",
+        path = function()
+          local user = vim.fn.expand("$USER")
+          if user == "andros" then
+            return "/home/andros/Nextcloud/Vault/"
+          elseif user == "andres" then
+            return "/home/andres/Nextcloud/Vault/"
+          else
+            error("obsidian.nvim: unknown user '" .. user .. "', please configure Vault path accordingly")
+          end
+        end,
       },
       -- {
       --   name = "personal",

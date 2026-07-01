@@ -2,3 +2,4 @@
 require("config.lazy")
 
 vim.opt.spell = false
+vim.opt.exrc = true

@@ -19,3 +19,6 @@
 
 -- disable the fucking bullshit for now
 vim.opt.spell = false
+
+-- Something related to odin.nvim
+vim.opt.exrc = true

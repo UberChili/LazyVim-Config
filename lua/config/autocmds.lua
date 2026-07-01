@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- C++ uses 4 spaces, like civilized people
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "cpp", "c", "hpp", "h" },
+  pattern = { "cpp", "c", "hpp", "h", "odin" },
   callback = function()
     vim.opt_local.shiftwidth = 4
     vim.opt_local.tabstop = 4

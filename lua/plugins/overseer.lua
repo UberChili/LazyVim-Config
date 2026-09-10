@@ -17,5 +17,18 @@ return {
         }
       end,
     })
+
+    overseer.register_template({
+      name = "go run",
+      condition = {
+        filetype = { "go" },
+      },
+      builder = function()
+        return {
+          cmd = { "go" },
+          args = { "run", "." },
+        }
+      end,
+    })
   end,
 }
